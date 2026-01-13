@@ -20,17 +20,18 @@ body {
 
 svg {
     display: block;
-    width: 100%;
 }
 
-#icon {
+.fit {
     max-width: 100%;
     max-height: 100%;
     width: auto;
     height: auto;
 }
 
-.stacked {
+#logo {
     display: flex;
     flex-direction: column;
+    width: 80%;
+    height: 80%;
 }
