@@ -48,24 +48,32 @@ async function eyeRandomBlink() {
     }
 }
 
-eye.addEventListener('mousedown', () => {
+function clickEye() {
     user_holding = true;
     eyeClose();
-});
+}
 
-eye.addEventListener('mouseup', () => {
+function releaseEye() {
     if (user_holding) {
         user_holding = false;
         eyeOpen();
     }
-});
+}
 
-eye.addEventListener('mouseleave', () => {
-    if (user_holding) {
-        user_holding = false;
-        eyeOpen();
-    }
-});
+if (window.PointerEvent) {
+    eye.addEventListener('pointerdown', clickEye);
+    eye.addEventListener('pointerup', releaseEye);
+    eye.addEventListener('pointerleave', releaseEye);
+    eye.addEventListener('pointercancel', releaseEye);
+} else {
+    eye.addEventListener('mousedown', clickEye);
+    eye.addEventListener('mouseup', releaseEye);
+    eye.addEventListener('mouseleave', releaseEye);
+
+    eye.addEventListener('touchstart', clickEye);
+    eye.addEventListener('touchend', releaseEye);
+    eye.addEventListener('touchcancel', releaseEye);
+}
 
 eyeBlink();
 eyeRandomBlink();
