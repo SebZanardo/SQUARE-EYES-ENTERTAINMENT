@@ -14,7 +14,6 @@ const DOUBLE_BLINK_CHANCE = 0.4;
 // Variables
 let user_holding = false;
 
-
 // Functions
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
