@@ -7,7 +7,7 @@ const MIN_DELAY_MS = 8000;
 const MAX_DELAY_MS = 20000;
 const OPEN_DURATION_MS = 200;
 const CLOSED_DURATION_MS = 100;
-const DOUBLE_BLINK_CHANCE = 0.4;
+const DOUBLE_BLINK_CHANCE = 0.3;
 
 // Variables
 let userHolding = false;
@@ -17,14 +17,14 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-function eyeOpen() {
-    EYELID.style.transition = `d ${OPEN_DURATION_MS}ms ease-in-out`;
-    EYELID.setAttribute('d', EYELID_OPEN_VALUE);
+function eyeOpen(duration = OPEN_DURATION_MS) {
+  EYELID.style.transition = `d ${duration}ms ease-in-out`;
+  EYELID.setAttribute('d', EYELID_OPEN_VALUE);
 }
 
-function eyeClose() {
-    EYELID.style.transition = `d ${CLOSED_DURATION_MS}ms ease-out`;
-    EYELID.setAttribute('d', EYELID_CLOSED_VALUE);
+function eyeClose(duration = CLOSED_DURATION_MS) {
+  EYELID.style.transition = `d ${duration}ms ease-out`;
+  EYELID.setAttribute('d', EYELID_CLOSED_VALUE);
 }
 
 function eyeBlink() {
@@ -73,6 +73,6 @@ EYE.addEventListener('touchend', releaseEye);
 EYE.addEventListener('touchcancel', releaseEye);
 
 // Entrypoint
-document.getElementById("eyelid").setAttribute("d", EYELID_OPEN_VALUE);
+eyeClose(0);
 eyeBlink();
 eyeRandomBlink();
