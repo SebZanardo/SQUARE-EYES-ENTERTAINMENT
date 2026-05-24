@@ -47,6 +47,7 @@ body {
     color: var(--color-fg);
     font-family: 'Noto Sans', sans-serif;
     min-height: 100vh;
+    min-height: 100svh;
     min-height: 100dvh;
 }
 
@@ -180,6 +181,7 @@ pre {
 #logo-section {
     width: 100%;
     height: calc(100vh - 4rem);
+    height: calc(100svh - 4rem);
     height: calc(100dvh - 4rem);
     display: flex;
     justify-content: center;
@@ -192,6 +194,11 @@ pre {
     width: 70vmin;
     height: 70vmin;
     margin: auto;
+}
+
+#eyelid {
+    transition: d 200ms ease-in-out;
+    will-change: d;
 }
 
 /* About */
@@ -344,6 +351,8 @@ pre {
 
 .burger-bar {
     transition: transform 0.20s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.15s ease;
+    will-change: transform;
+    transform: translateZ(0);
 }
 
 #burger-btn.icon-open #bar1 {
@@ -390,6 +399,7 @@ pre {
     top: 0;
     right: 0;
     height: 100vh;
+    height: 100svh;
     height: 100dvh;
     width: max(12rem, 25vw);
     z-index: 30;
