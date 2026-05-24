@@ -392,11 +392,11 @@ pre {
 
 #nav-drawer a:hover {
     opacity: 0.75;
-    transform: translateX(-12px);
+    transform: translateX(-24px);
 }
 
 #nav-drawer a:active {
-    transform: translateX(-2px) scale(0.97);
+    transform: translateX(-16px);
 }
 
 #nav-drawer a::after {
@@ -407,7 +407,7 @@ pre {
     width: 10px;
     height: 10px;
     background-color: var(--color-fg);
-    transform: translate(50%, -20%);
+    transform: translate(200%, -20%);
     opacity: 0;
     transition: transform 0.25s ease, opacity 0.2s ease;
 }

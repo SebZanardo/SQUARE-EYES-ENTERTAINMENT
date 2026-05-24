@@ -1,7 +1,7 @@
 assets/img/other-icons
     aseprite.svg (https://commons.wikimedia.org/wiki/File:Logo_Aseprite.svg)
-    audacity.svg (https://commons.wikimedia.org/wiki/File:Audacity_Logo.svg)
-    blendersvg (https://commons.wikimedia.org/wiki/File:Blender_logo_no_text.svg)
+    audacity.png (https://commons.wikimedia.org/wiki/File:Audacity_Logo.svg)
+    blender.svg (https://commons.wikimedia.org/wiki/File:Blender_logo_no_text.svg)
     c-language.png (https://commons.wikimedia.org/wiki/File:C_Programming_Language.svg)
     debian.svg (https://commons.wikimedia.org/wiki/File:Openlogo-debianV2.svg)
     fl-studio.png (https://downloads.image-line.com/Press/FLStudio_logo.png)
