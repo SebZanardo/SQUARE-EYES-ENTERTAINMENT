@@ -1,0 +1,17 @@
+assets/img/other-icons
+    aseprite.svg (https://commons.wikimedia.org/wiki/File:Logo_Aseprite.svg)
+    audacity.svg (https://commons.wikimedia.org/wiki/File:Audacity_Logo.svg)
+    blendersvg (https://commons.wikimedia.org/wiki/File:Blender_logo_no_text.svg)
+    c-language.png (https://commons.wikimedia.org/wiki/File:C_Programming_Language.svg)
+    debian.svg (https://commons.wikimedia.org/wiki/File:Openlogo-debianV2.svg)
+    fl-studio.png (https://downloads.image-line.com/Press/FLStudio_logo.png)
+    ghostty.png (https://github.com/ghostty-org/ghostty/blob/main/images/icons/icon_256.png)
+    inkscape.svg (https://commons.wikimedia.org/wiki/File:Inkscape_Logo.svg)
+    neovim.svg (https://commons.wikimedia.org/wiki/File:Neovim-mark.svg)
+    raylib.png (https://commons.wikimedia.org/wiki/File:Raylib_logo.png)
+
+assets/img/social-icons
+    github.svg (https://commons.wikimedia.org/wiki/File:Octicons-mark-github.svg)
+    itchio.svg (https://commons.wikimedia.org/wiki/File:Itch.io_logo.svg)
+    linkedin.svg (https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg)
+    steam.svg (https://commons.wikimedia.org/wiki/File:Steam_2016_logo_black.svg)
