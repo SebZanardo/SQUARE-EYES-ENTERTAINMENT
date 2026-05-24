@@ -3,7 +3,6 @@
     --color-fg: #ffffff;
     --color-gray-light: #666666;
     --color-gray-dark: #222222;
-    --color-text-muted: #dddddd;
 }
 
 /* Fonts */
@@ -146,57 +145,51 @@ pre {
     height: 2rem;
 }
 
-/* Blog */
+.scroll-fade {
+    position: fixed;
+    left: 0;
+    right: 0;
+    height: 80px;
+    pointer-events: none;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
 
-.entry {
+.scroll-fade.top {
+    top: 0;
+    background: linear-gradient(to bottom,
+            #000000 0%,
+            rgba(0, 0, 0, 0.7) 25%,
+            rgba(0, 0, 0, 0.2) 60%,
+            transparent 100%);
+}
+
+.scroll-fade.bottom {
+    bottom: 0;
+    background: linear-gradient(to top,
+            #000000 0%,
+            rgba(0, 0, 0, 0.7) 25%,
+            rgba(0, 0, 0, 0.2) 60%,
+            transparent 100%);
+}
+
+/* Home */
+
+#logo-section {
+    width: 100%;
+    height: calc(100vh - 4rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-    margin-bottom: 4rem;
-}
-
-.entry:last-child {
-    margin-bottom: 0;
-}
-
-.header-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-}
-
-.date {
-    color: var(--color-gray-light);
-    font-weight: 400;
-}
-
-.separator {
-    border: 0;
-    height: 1px;
-    background-color: var(--color-gray-dark);
-    margin-block: 0.2rem;
-}
-
-.media {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 4px;
-}
-
-.media-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 0.75rem;
-}
-
-.media-caption {
-    font-size: 0.8rem;
-    color: var(--color-gray-light);
-    text-align: center;
-    margin-top: 0.2rem;
+    width: 70vmin;
+    height: 70vmin;
+    margin: auto;
 }
 
 /* About */
@@ -263,22 +256,57 @@ pre {
     cursor: pointer;
 }
 
-/* Home */
+/* Blog */
 
-#logo-section {
-    width: 100%;
-    height: calc(100vh - 4rem);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#logo {
+.entry {
     display: flex;
     flex-direction: column;
-    width: 70vmin;
-    height: 70vmin;
-    margin: auto;
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+}
+
+.entry:last-child {
+    margin-bottom: 0;
+}
+
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.date {
+    color: var(--color-gray-light);
+    font-weight: 400;
+}
+
+.separator {
+    border: 0;
+    height: 1px;
+    background-color: var(--color-gray-dark);
+    margin-block: 0.2rem;
+}
+
+.media {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+}
+
+.media-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0.75rem;
+}
+
+.media-caption {
+    font-size: 0.8rem;
+    color: var(--color-gray-light);
+    text-align: center;
+    margin-top: 0.2rem;
 }
 
 /* Navigation */
@@ -287,13 +315,13 @@ pre {
     position: fixed;
     top: 1.25rem;
     right: 1.25rem;
-    z-index: 1000;
+    z-index: 9999;
     background: none;
     border: none;
     cursor: pointer;
     padding: 0;
-    width: clamp(2rem, 4vw, 4rem);
-    height: clamp(2rem, 4vw, 4rem);
+    width: 3rem;
+    height: 3rem;
     transition: transform 0.15s ease, opacity 0.15s ease;
 }
 
@@ -332,7 +360,7 @@ pre {
     position: fixed;
     inset: 0;
     pointer-events: none;
-    z-index: 50;
+    z-index: 20;
     background-image: linear-gradient(to left, rgba(0, 0, 0, 1.0) 0%, rgba(0, 0, 0, 0.7) 25%, rgba(0, 0, 0, 0.2) 100%);
     opacity: 0;
     transition: opacity 0.15s ease;
@@ -349,7 +377,7 @@ pre {
     right: 0;
     height: 100vh;
     width: max(12rem, 25vw);
-    z-index: 100;
+    z-index: 30;
     transform: translateX(100%);
     transition: transform 0.20s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -366,7 +394,7 @@ pre {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    z-index: 1;
+    z-index: 10;
 }
 
 #nav-drawer li {
