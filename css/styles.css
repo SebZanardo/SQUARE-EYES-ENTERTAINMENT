@@ -5,7 +5,7 @@
     --color-gray-dark: #222222;
 }
 
-/* Fonts */
+/* Fonts -------------------------------------------------------------------- */
 
 @font-face {
     font-display: swap;
@@ -31,7 +31,7 @@
     src: url('../assets/fonts/agave/agave-400.woff2') format('woff2');
 }
 
-/* Base */
+/* Base --------------------------------------------------------------------- */
 
 * {
     margin: 0;
@@ -47,6 +47,7 @@ body {
     color: var(--color-fg);
     font-family: 'Noto Sans', sans-serif;
     min-height: 100vh;
+    min-height: 100dvh;
 }
 
 main {
@@ -114,7 +115,7 @@ pre {
     white-space: pre;
 }
 
-/* Utilities */
+/* Utilities ---------------------------------------------------------------- */
 
 .fit {
     max-width: 100%;
@@ -174,7 +175,7 @@ pre {
             transparent 100%);
 }
 
-/* Home */
+/* Home --------------------------------------------------------------------- */
 
 #logo-section {
     width: 100%;
@@ -256,7 +257,7 @@ pre {
     cursor: pointer;
 }
 
-/* Blog */
+/* Blog --------------------------------------------------------------------- */
 
 .entry {
     display: flex;
@@ -309,7 +310,7 @@ pre {
     margin-top: 0.2rem;
 }
 
-/* Navigation */
+/* Navigation --------------------------------------------------------------- */
 
 #burger-btn {
     position: fixed;
@@ -344,16 +345,28 @@ pre {
     transition: transform 0.20s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.15s ease;
 }
 
-#burger-btn.open #bar1 {
+#burger-btn.icon-open #bar1 {
     transform: translateY(953px);
 }
 
-#burger-btn.open #bar2 {
+#burger-btn.icon-open #bar2 {
     transform: translateY(563px);
 }
 
-#burger-btn.open #bar3 {
+#burger-btn.icon-open #bar3 {
     transform: translateY(254px);
+}
+
+#burger-btn.menu-open #bar1 {
+    transform: translateY(0);
+}
+
+#burger-btn.menu-open #bar2 {
+    transform: translateY(0);
+}
+
+#burger-btn.menu-open #bar3 {
+    transform: translateY(0);
 }
 
 #nav-overlay {
@@ -361,7 +374,7 @@ pre {
     inset: 0;
     pointer-events: none;
     z-index: 20;
-    background-image: linear-gradient(to left, rgba(0, 0, 0, 1.0) 0%, rgba(0, 0, 0, 0.7) 25%, rgba(0, 0, 0, 0.2) 100%);
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 1.0) 0%, rgba(0, 0, 0, 0.9) 30%, rgba(0, 0, 0, 0.2) 100%);
     opacity: 0;
     transition: opacity 0.15s ease;
 }
