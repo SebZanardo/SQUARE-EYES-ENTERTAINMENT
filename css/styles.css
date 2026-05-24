@@ -255,14 +255,12 @@ pre {
 }
 
 .email-display {
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    gap: 0.6rem;
     font-family: 'Agave', monospace;
-    font-size: 0.95rem;
     color: var(--color-gray-light);
-    letter-spacing: 0.03em;
     user-select: all;
+    cursor: pointer;
 }
 
 /* Home */
