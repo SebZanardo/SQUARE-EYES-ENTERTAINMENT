@@ -1,10 +1,12 @@
 assets/img/other-icons
+    apple.svg (https://commons.wikimedia.org/wiki/File:Apple_logo_white.svg)
     aseprite.svg (https://commons.wikimedia.org/wiki/File:Logo_Aseprite.svg)
     audacity.png (https://commons.wikimedia.org/wiki/File:Audacity_Logo.svg)
     blender.svg (https://commons.wikimedia.org/wiki/File:Blender_logo_no_text.svg)
     c-language.png (https://commons.wikimedia.org/wiki/File:C_Programming_Language.svg)
     debian.svg (https://commons.wikimedia.org/wiki/File:Openlogo-debianV2.svg)
     fl-studio.png (https://downloads.image-line.com/Press/FLStudio_logo.png)
+    gimp.svg (https://commons.wikimedia.org/wiki/File:The_GIMP_icon_-_v3.0.svg)
     ghostty.png (https://github.com/ghostty-org/ghostty/blob/main/images/icons/icon_256.png)
     inkscape.svg (https://commons.wikimedia.org/wiki/File:Inkscape_Logo.svg)
     neovim.svg (https://commons.wikimedia.org/wiki/File:Neovim-mark.svg)
